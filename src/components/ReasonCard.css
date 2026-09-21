@@ -1,0 +1,19 @@
+.reason-card {
+  background-color: #1a1a2e;
+  border-radius: 8px;
+  padding: 30px;
+  width: 260px;
+  min-height: 200px;
+}
+
+.reason-title {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.reason-desc {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.5;
+}

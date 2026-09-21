@@ -1,0 +1,16 @@
+.trending-section {
+  background-color: #141414;
+  padding: 40px 60px;
+}
+
+.trending-title {
+  color: white;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.trending-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
