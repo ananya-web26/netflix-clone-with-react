@@ -1,11 +1,10 @@
 import MovieCard from './MovieCard';
-import './TrendingNow.css';
 
 function TrendingNow() {
   return (
-    <div className="trending-section">
-      <h2 className="trending-title">Trending Now</h2>
-      <div className="trending-row">
+    <div className="bg-neutral-900 py-10 px-16">
+      <h2 className="text-white text-2xl mb-5">Trending Now</h2>
+      <div className="flex gap-7 overflow-x-auto">
         <MovieCard number="1" title="Movie 1" image="https://picsum.photos/220/300?random=1" />
         <MovieCard number="2" title="Movie 2" image="https://picsum.photos/220/300?random=2" />
         <MovieCard number="3" title="Movie 3" image="https://picsum.photos/220/300?random=3" />

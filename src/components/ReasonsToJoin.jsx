@@ -1,11 +1,10 @@
 import ReasonCard from './ReasonCard';
-import './ReasonsToJoin.css';
 
 function ReasonsToJoin() {
   return (
-    <div className="reasons-section">
-      <h2 className="reasons-title">More reasons to join</h2>
-      <div className="reasons-row">
+    <div className="bg-black py-10 px-16">
+      <h2 className="text-white text-3xl mb-6">More reasons to join</h2>
+      <div className="grid grid-cols-4 gap-5">
         <ReasonCard
           title="Enjoy on your TV"
           description="Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more."
