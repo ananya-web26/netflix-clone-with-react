@@ -1,15 +1,27 @@
+import { useState } from 'react';
 import MovieCard from './MovieCard';
 
-function TrendingNow() {
+function TrendingNow({ title, movies }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="bg-neutral-900 py-10 px-16">
-      <h2 className="text-white text-2xl mb-5">Trending Now</h2>
+      <h2 className="text-white text-2xl mb-5">{title}</h2>
+      <input
+        type="text"
+        placeholder="Search movies..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="mb-5 px-4 py-2 rounded bg-black text-white border border-gray-600"
+      />
       <div className="flex gap-7 overflow-x-auto">
-        <MovieCard number="1" title="Movie 1" image="https://picsum.photos/220/300?random=1" />
-        <MovieCard number="2" title="Movie 2" image="https://picsum.photos/220/300?random=2" />
-        <MovieCard number="3" title="Movie 3" image="https://picsum.photos/220/300?random=3" />
-        <MovieCard number="4" title="Movie 4" image="https://picsum.photos/220/300?random=4" />
-        <MovieCard number="5" title="Movie 5" image="https://picsum.photos/220/300?random=5" />
+        {filteredMovies.map((movie, index) => (
+          <MovieCard key={movie.id} movie={movie} number={index + 1} />
+        ))}
       </div>
     </div>
   );
